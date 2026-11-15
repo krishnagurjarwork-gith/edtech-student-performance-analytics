@@ -1,3 +1,4 @@
+
 # EdTech Student Performance & Engagement Analytics Dashboard
 
 ## Project Overview
@@ -6,14 +7,14 @@ The **EdTech Student Performance & Engagement Analytics Dashboard** is a data en
 
 The project uses Microsoft Azure services to process student engagement data through a Medallion Architecture and presents meaningful insights through an interactive Power BI dashboard.
 
-## Objectives
+## Project Objectives
 
 - Analyse student engagement with online video lectures.
 - Track student watch time and learning behaviour.
 - Identify lecture drop-off patterns.
-- Analyse the relationship between engagement and academic performance.
+- Analyse the relationship between student engagement and academic performance.
 - Identify students who may be at academic risk.
-- Present insights through interactive visualisations.
+- Present meaningful insights through interactive visualisations.
 
 ## Technologies Used
 
@@ -22,24 +23,35 @@ The project uses Microsoft Azure services to process student engagement data thr
 | Azure Data Lake Storage Gen2 | Data storage |
 | Azure Data Factory | Workflow orchestration |
 | Azure Databricks | Data processing and transformation |
-| Azure SQL | Data querying and storage |
-| Power BI | Dashboard and visualisation |
-| Python / PySpark | Data processing |
+| Python | Data processing |
+| PySpark | Large-scale data transformation |
+| SQL | Data querying and analysis |
+| Power BI | Dashboard creation and visualisation |
 
 ## Project Architecture
 
-The project follows the **Medallion Architecture**:
+The project follows the **Medallion Architecture**, which organises data processing into three layers:
 
-1. **Bronze Layer:** Raw student engagement data is ingested and stored.
-2. **Silver Layer:** Data cleaning and transformation are performed.
-3. **Gold Layer:** Processed data is prepared for analytics and dashboard reporting.
+### 1. Bronze Layer
+- Stores raw student engagement data.
+- Maintains the original ingested data.
 
-Azure Data Factory is used to orchestrate the data processing workflow.
+### 2. Silver Layer
+- Performs data cleaning and transformation.
+- Prepares structured data for further analysis.
+
+### 3. Gold Layer
+- Stores processed data prepared for analytics.
+- Supports dashboard reporting and visualisation.
+
+Azure Data Factory is used to orchestrate the data processing workflow, while Azure Databricks handles data transformation.
+
+For a detailed explanation, see [Project Architecture](PROJECT_ARCHITECTURE.md).
 
 ## Key Dashboard Features
 
 - Student engagement analysis
-- Watch-time analysis
+- Video lecture watch-time analysis
 - Topic-wise performance comparison
 - Student risk identification
 - Academic performance insights
@@ -49,11 +61,13 @@ Azure Data Factory is used to orchestrate the data processing workflow.
 
 Watch the project demonstration video:
 
-[▶ Watch on YouTube](https://youtu.be/fK9njP3VOtA)
+[▶ Watch Project Demo on YouTube](https://youtu.be/fK9njP3VOtA)
 
 ## Project Screenshots
 
-The `screenshots` folder contains visual evidence of the project implementation, including Azure resources, data processing workflows, and the Power BI dashboard.
+The `screenshots` folder contains visual evidence of the project, including Azure resources, data processing workflows, and Power BI dashboard views.
+
+[View Project Screenshots](screenshots/)
 
 ## Repository Structure
 
@@ -61,18 +75,30 @@ The `screenshots` folder contains visual evidence of the project implementation,
 edtech-student-performance-analytics/
 │
 ├── README.md
+├── PROJECT_ARCHITECTURE.md
+│
 ├── screenshots/
+│   └── README.md
+│
 ├── notebooks/
-├── sql/
-└── report/
+│   └── README.md
+│
+└── sql/
+    └── README.md
 ```
+
+**Note:** The repository currently includes project documentation and screenshots. Original notebook source files and SQL scripts are not included at this stage.
 
 ## Conclusion
 
-This project demonstrates how cloud-based data engineering and business intelligence tools can be integrated to analyse student engagement and academic performance. It aims to support data-driven insights into online learning behaviour and student performance.
+This project demonstrates the use of cloud-based data engineering and business intelligence technologies to analyse student engagement and academic performance.
+
+It aims to generate meaningful, data-driven insights into online learning behaviour and help identify students who may require additional academic support.
 
 ---
 
 **Project Domain:** Data Engineering & Analytics  
 **Project Type:** Academic / Industrial Training Project  
-**Technologies:** Microsoft Azure, Databricks, Python, SQL and Power BI
+**Technologies:** Microsoft Azure, Databricks, Python, PySpark, SQL and Power BI
+
+**Developed by:** Krishna Gurjar
